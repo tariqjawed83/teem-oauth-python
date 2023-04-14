@@ -1,5 +1,3 @@
-# Copyright 2019 Kirk Hlavka
-
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -29,10 +27,7 @@ SCOPES        = ['reservations']
 #==== QuickStart Command-line App
 
 def main():
-    """
-    Connects your app a Hub, then fetches the first Contact in the CRM.
-    Note: If you want to change hubs or scopes, delete the `hstoken.pickle` file and rerun.
-    """
+
     app_config = {
         'client_id': CLIENT_ID,
         'client_secret': CLIENT_SECRET,
@@ -41,7 +36,7 @@ def main():
         'token_uri': 'https://app.teem.com/oauth/token/?'
     }
 
-    # The file hstoken.pickle stores the app's access and refresh tokens for the hub you connect to.
+    # The file hstoken.pickle stores the app's access and refresh tokens for the Teem you connect to.
     # It is created automatically when the authorization flow completes for the first time.
     if os.path.exists('hstoken.pickle'):
         with open('hstoken.pickle','rb') as tokenfile:
@@ -67,11 +62,9 @@ def main():
         )
 
     # Pretty-print our API result to console
-    print('Here is one Contact Record from your CRM:')
-    print('-----------------------------------------')
     print(json.dumps(response.json(), indent=2, sort_keys=True))
 
-    print('here is the token: ')
+    print('Here is the acess token: ')
     print(token)
 
     
