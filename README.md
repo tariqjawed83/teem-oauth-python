@@ -20,7 +20,7 @@ Run the following command to install the Python packages used for OAUTH:
 
 ## Step 2: Set up your QuickStart App
 
-  Update `CLIENT_ID` and `CLIENT_SECRET` with your App's ID and Secret from Step 1.
+  Update `CLIENT_ID` and `CLIENT_SECRET` with your App's ID and Secret from Step 1 in the quickstart/quickstart.py
 
 ## Step 3: Run your app
 
