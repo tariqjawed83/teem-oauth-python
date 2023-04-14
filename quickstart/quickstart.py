@@ -56,7 +56,7 @@ def main():
         token_updater=SaveTokenToFile
     )
 
-    # Call the 'Get all contacts' API endpoint
+    # Call the 'Get all users' API endpoint
     response = teem_api.get(
             'https://app.teem.com/api/v4/accounts/users'
         )
