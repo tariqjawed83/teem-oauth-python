@@ -19,8 +19,8 @@ import pickle
 import json
 
 # Replace with your App's Client ID and Secret
-CLIENT_ID     = 'paste-your-client-key-here'
-CLIENT_SECRET = 'paste-your-client-secret-here'
+CLIENT_ID     = 'YOUR_CLIENT_ID_HERE'
+CLIENT_SECRET = 'YOUR_CLIENT_SECRET_HERE'
 
 # If modifying these scopes, delete the file hstoken.pickle.
 SCOPES        = ['reservations']
@@ -63,16 +63,13 @@ def main():
 
     # Call the 'Get all contacts' API endpoint
     response = teem_api.get(
-            'https://app.teem.com/api/v4/accounts/users',
-            params={ 'count': 1 } # Return only 1 result -- for demo purposes
+            'https://app.teem.com/api/v4/accounts/users'
         )
 
     # Pretty-print our API result to console
     print('Here is one Contact Record from your CRM:')
     print('-----------------------------------------')
     print(json.dumps(response.json(), indent=2, sort_keys=True))
-
-    #response = ""
 
     print('here is the token: ')
     print(token)

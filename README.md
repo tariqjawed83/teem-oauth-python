@@ -41,8 +41,6 @@ Run your app with the following command:
 
 ## Try this next...
 
-* Get multiple records -- Update the `count` param in your request to fetch up to 100 records.
-
 ### Notes
 
 * Authorization information is stored on the file system, so subsequent executions will not prompt for authorization.
